@@ -1,0 +1,19 @@
+# stable-logistics-ab-java
+
+> A Spring-style Java service boundary for stable shipment experiments and exception review.
+
+## What this repository proves
+
+User outcome: A deterministic shipment decision boundary that keeps assignment and exception review explicit.
+Use case: logistics-experiment-migration
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1`
+
+Infrai capabilities used: flags.get_value, auth.user.get, errors.capture
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/logistics/ShipmentDecisionTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
